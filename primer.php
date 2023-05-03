@@ -10,7 +10,7 @@
     <h1>Página PHP</h1>
     <?php
         //Código de PHP
-        echo "Adios pika";
+        echo "Adios ";
     ?>
 </body>
 </html>
