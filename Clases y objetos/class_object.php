@@ -1,10 +1,14 @@
 <?php 
 //Creamos la clase Profesor
     class Profesor {
-        //Atributos que son las propiedades del objeto
+        //Propiedades del objeto
+
+        //Atributos 
         public $nombre = 'Marc';
         public $apellido = 'Esteve';
         public $altura = 1.75;
+
+        public $materia = "Programador back-end";
 
         // echo $nombre; no funciona
 
@@ -15,6 +19,9 @@
     }
     $persona = new Profesor();//Creamos OBJETO
     // echo gettype($persona); //Muestra tipo "object"
-    echo 'El nombre del profesor es ' . $persona->nombre . ' ' . $persona->apellido . " con una altura de " . $persona->altura . 'm';
+    echo 'El nombre del profesor es ' . $persona->nombre . ' ' . $persona->apellido . " con una altura de " . $persona->altura . 'm' . " que imparte Clases de " . $persona->materia;
     $persona->hablar("<br>Un cordial saludo");
+
+    
+
 ?>
