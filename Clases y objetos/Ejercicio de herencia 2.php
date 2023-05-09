@@ -10,6 +10,8 @@ class Vehiculo {
     $this->anio = $anio;
   }
 
+  
+
   public function getInfo() {
     return "Marca: $this->marca, Modelo: $this->modelo, Año: $this->anio";
   }
