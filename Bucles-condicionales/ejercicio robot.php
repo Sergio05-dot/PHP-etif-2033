@@ -1,5 +1,5 @@
 <?php
-$ruedaIzq= 0;
+$ruedaIzq=  0;
 $ruedaDer= 0;
 
 if ($ruedaIzq > 15 && $ruedaDer > 19 ){
