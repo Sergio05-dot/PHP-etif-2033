@@ -20,14 +20,14 @@ $marc = array('telefono' => 54743221, 'edad' => 35, 'ciudad' => 'Castelldefels')
 	<ul>
 		<?php
 			# Con el ciclo foreach podemos recorrer arrays de una manera muy fácil.
-			// foreach($meses as $mes){
-			// 	echo '<li>' . $mes . '</li>';
-			// }
-
-			# El ciclo foreach también NOS PERMITE recorrer arrays asosiativos.
-			foreach($marc as $dato => $valor){
-				echo '<li>' . $dato . ' : ' . $valor . '</li>';
+			foreach($meses as $mes){
+				echo '<li>' . $mes . '</li>';
 			}
+
+			// # El ciclo foreach también NOS PERMITE recorrer arrays asosiativos.
+			// foreach($marc as $dato => $valor){
+			// 	echo '<li>' . $dato . ' : ' . $valor . '</li>';
+			// }
 
 		?>
 	</ul>

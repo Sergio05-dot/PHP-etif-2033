@@ -22,22 +22,22 @@ $paises = array(
         // }
 
 		#Muestra todos menos China
-		// foreach($paises as $pais){
-		// 	if ($pais == 'China') {
-        //     	continue;
-        //     }
-		// 	echo $pais . '<br />';
-        // }
-
-		#USO DEL BREAK
 		foreach($paises as $pais){
-			
-			if ($pais == 'China') {
-				break;
-			}
+			if ($pais == 'Tailandia') {
+            	break;
+            }
 			echo $pais . '<br />';
+        }
+
+		// #USO DEL BREAK
+		// foreach($paises as $pais){
 			
-		}
+		// 	if ($pais == 'China') {
+		// 		break;
+		// 	}
+		// 	echo $pais . '<br />';
+			
+		// }
 	?>
 </body>
 </html>

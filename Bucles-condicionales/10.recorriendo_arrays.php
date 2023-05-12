@@ -13,11 +13,6 @@ for($i = 0; $i < count($meses); $i++){
 }
 
 
-$contador = 0;
-while($contador < count($meses)){
-	echo $meses[$contador]. '<br />';
-
-	$contador++;
-}
+//  
 
 ?>
