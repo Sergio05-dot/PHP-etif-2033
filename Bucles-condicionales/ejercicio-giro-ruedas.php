@@ -22,7 +22,7 @@
 
 $VelRizq=10; //VELOCIDAD RUEDA IZQUIERDA
 $VelRder=5; //VELOCIDAD RUEDA DERECHA
-if ($VelRizq>=10 && $VelRder>=5) {
+if ($VelRizq >= 10 && $VelRder >= 5) {
     if($VelRizq>$VelRder){
         echo "Estamos girando a la derecha";
     } 
