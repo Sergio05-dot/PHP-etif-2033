@@ -20,7 +20,7 @@ $semana = array(
 
 // rsort($numeros);
 // sort($meses);
-rsort($semana);
+sort($semana);
  //Función del array que queremos ordenar
 // rsort($meses); Inverso del array
 // rsort($numeros);
@@ -35,17 +35,6 @@ rsort($semana);
 <body>
 	<h1>Meses del Año</h1>
 	<ul>
-		<!-- <?php
-			foreach($numeros as $numero){
-				echo '<li>' . $numero . '</li>';
-			}
-		?>
-		<?php
-			foreach($meses as $mes){
-				echo '<li>' . $mes . '</li>';
-			}
-		?> -->
-
         <?php
 			foreach($semana as $alberto){
 				echo '<li>' . $alberto . '</li>';
