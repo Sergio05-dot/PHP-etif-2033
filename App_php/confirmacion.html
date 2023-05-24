@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Formulario de Contacto</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+
+    <form method="POST" action="enviar.php">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <br>
+
+        <label for="correo">Correo electronico:</label>
+        <input type="email" name="correo" id="correo" required>
+        <br>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" name="telefono" id="telefono">
+        <br>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" required></textarea>
+        <br>
+
+        <input type="checkbox" name="terminos" id="terminos" required>
+        <label for="terminos">Acepto los terminos y condiciones</label>
+        <br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
