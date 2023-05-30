@@ -1,23 +1,65 @@
 <?php
+$errores = [];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = limpiarCampo($_POST["nombre"]);
-    $correo = limpiarCampo($_POST["correo"]);
-    $telefono = limpiarCampo($_POST["telefono"]);
-    $mensaje = limpiarCampo($_POST["mensaje"]);
+    if (isset($_POST["submit"])) {
+        $nombre = limpiarCampo($_POST["nombre"]);
+        $correo = limpiarCampo($_POST["correo"]);
+        $telefono = limpiarCampo($_POST["telefono"]);
+        $mensaje = limpiarCampo($_POST["mensaje"]);
 
-    // Validar los campos
-    if (empty($nombre) || empty($correo) || empty($mensaje)) {
-        echo "Por favor, completa todos los campos obligatorios.";
-    } elseif (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
-        echo "El formato del correo electrónico no es válido.";
-    } else {
-        // Procesar los datos recibidos
-        // ...
-        // Aquí puedes realizar acciones adicionales, como enviar un correo electrónico o guardar la información en una base de datos
+        // Validar los campos
+        if (empty($nombre)) {
+            $errores[] = "El campo Nombre es obligatorio.";
+        }
 
-        // Redireccionar a una página de confirmación o mostrar un mensaje de éxito
-        header("Location: confirmacion.html");
-        exit();
+        if (empty($correo)) {
+            $errores[] = "El campo Correo es obligatorio.";
+        } elseif (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+            $errores[] = "El formato del correo electrónico no es válido.";
+        }
+
+        if (empty($mensaje)) {
+            $errores[] = "El campo Mensaje es obligatorio.";
+        }
+
+        if (empty($errores)) {
+        
+            header("Location: confirmacion.html");
+            exit();
+        }
+    } elseif (isset($_POST["submit"])) {
+        
+    }
+} elseif ($_SERVER["REQUEST_METHOD"] == "GET") {
+    if (isset($_GET["submit"])) {
+        $nombre = limpiarCampo($_GET["nombre"]);
+        $correo = limpiarCampo($_GET["correo"]);
+        $telefono = limpiarCampo($_GET["telefono"]);
+        $mensaje = limpiarCampo($_GET["mensaje"]);
+
+        // Validar los campos
+        if (empty($nombre)) {
+            $errores[] = "El campo Nombre es obligatorio.";
+        }
+
+        if (empty($correo)) {
+            $errores[] = "El campo Correo es obligatorio.";
+        } elseif (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+            $errores[] = "El formato del correo electrónico no es válido.";
+        }
+
+        if (empty($mensaje)) {
+            $errores[] = "El campo Mensaje es obligatorio.";
+        }
+
+        if (empty($errores)) {
+           
+            header("Location: confirmacion.html");
+            exit();
+        }
+    } elseif (isset($_GET["submit2"])) {
+        
     }
 }
 
