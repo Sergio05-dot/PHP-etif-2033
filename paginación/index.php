@@ -41,7 +41,7 @@ $articulos = $articulos->fetchAll();
 
 // Comprobamos que haya articulos, sino entonces redirigimos.
 if (!$articulos) {
-	header('Location: http://localhost/cursowebetif2022/PHP/paginacion');
+	header('Location: http://localhost/PHP-etif-2033/paginaci%c3%b3n/');
 }
 
 // Calculamos el total de articulos, para despues conocer el numero de paginas de la paginacion.
