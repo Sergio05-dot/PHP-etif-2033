@@ -32,10 +32,7 @@
         <?php foreach ($resultadosTabla as $tabla): ?>
             <tr>
                 <td>
-                    <form method="post">
-                        <input type="hidden" name="eliminar" value="<?php echo $tabla['id']; ?>">
-                        <button type="submit" class="delete-button">x</button>
-                    </form>
+                    <span class="delete-button" onclick="eliminarRegistro(<?php echo $tabla['ID']; ?>)">x</span>
                     <?php echo $tabla['CÓDIGOCLIENTE']; ?>
                 </td>
                 <td><?php echo $tabla['EMPRESA']; ?></td>
@@ -46,5 +43,13 @@
             </tr>
         <?php endforeach; ?>
     </table>
+
+    <script>
+        function eliminarRegistro(id) {
+            if (confirm('¿Estás seguro de que deseas eliminar este registro?')) {
+                window.location.href = 'ej-vista-eliminar.php?eliminar=' + id;
+            }
+        }
+    </script>
 </body>
 </html>
