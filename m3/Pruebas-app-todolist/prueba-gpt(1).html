@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List App</title>
+  <link rel="stylesheet" type="text/css" href="prueba-gpt(1).css">
+</head>
+<body>
+  <h1>To-Do List App</h1>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Categorías</h2>
+      <select>
+        <option value="deportes">Deportes</option>
+        <option value="salud">Salud</option>
+        <option value="casa">Casa</option>
+        <!-- Agrega aquí más categorías -->
+      </select>
+    </div>
+
+    <div class="main-content">
+      <h2>Actividades</h2>
+      <ul class="activity-list">
+        <li><a href="#">Actividad 1</a></li>
+        <li><a href="#">Actividad 2</a></li>
+        <li><a href="#">Actividad 3</a></li>
+        <!-- Agrega aquí más actividades -->
+      </ul>
+
+      <div class="forms">
+        <h3>Crear Actividad</h3>
+        <form>
+          <input type="text" placeholder="Nombre de la actividad" required>
+          <!-- Agrega aquí más campos según tus necesidades -->
+          <button type="submit">Crear</button>
+        </form>
+
+        <h3>Editar Actividad</h3>
+        <form>
+          <input type="text" placeholder="Nombre de la actividad a editar" required>
+          <!-- Agrega aquí más campos según tus necesidades -->
+          <button type="submit">Editar</button>
+        </form>
+      </div>
+
+      <h2>Todas las actividades</h2>
+      <table class="activity-table">
+        <tr>
+          <th>Actividad</th>
+          <th>Acciones</th>
+        </tr>
+        <tr>
+          <td>Actividad 1</td>
+          <td><button class="delete-btn">Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>Actividad 2</td>
+          <td><button class="delete-btn">Eliminar</button></td>
+        </tr>
+        <!-- Agrega aquí más filas de actividades -->
+      </table>
+    </div>
+  </div>
+</body>
+</html>
